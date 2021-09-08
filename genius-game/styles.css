@@ -1,0 +1,277 @@
+/* HTML Tags */
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin: 0;
+}
+
+main {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 100vh;
+    padding: 10px;
+    padding-top: 5%;
+    width: 100vw;
+}
+
+/* General */
+
+.perfect-center {
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.night-mode-transition {
+    transition: 1s;
+}
+
+/* Container */
+.container {
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Game */
+
+.game {
+    align-items: center;
+    background-color: #222;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 50vw;
+    justify-content: space-around;
+    margin: auto;
+    padding: 1.5%;
+    position: relative;
+    margin-top: 2%;
+    width: 50vw;
+}
+
+
+.clickable {
+    height: 45%;
+    opacity: 0.5;
+    transition: 0.75s;
+    width: 45%;
+}
+
+    
+.top-left.round-corner {
+    border-radius: 100% 5px 5px;
+}
+
+.top-right.round-corner {
+    border-radius: 5px 100% 5px 5px;
+}
+
+.bottom-left.round-corner {
+    border-radius: 5px 5px 5px 100%;
+}
+
+.bottom-right.round-corner {
+    border-radius: 5px 5px 100% 5px;
+}
+
+.control-container {
+    height: 100%;
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+}
+
+.control {
+    background-color: #222;
+    border-radius: 100px;
+    cursor: pointer;
+    height: 25%;
+    margin: 10px 0;
+    position: relative;
+    width: 25%;
+}
+
+.control .background {
+    background-color: green;
+    border-radius: 100px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 80%;
+    pointer-events: initial;
+    position: absolute;
+    width: 80%;
+}
+
+.control p {
+    pointer-events: none;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+
+.hover {
+    opacity: 0.5;
+}
+
+.active {
+    opacity: 1;
+}
+
+/* HUD */
+
+.hud {
+    display: flex;
+    justify-content: center;
+    margin: 30px auto;
+    width: 50vw;
+}
+
+.hud div {
+    background-color: #fff;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    margin: 0 1vw;
+    padding: 15px;
+}
+.hud div p{
+    color: #000;
+    font-weight: 800;
+}
+.score, .high-score {
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Night Mode */
+
+.night-mode-button {
+    border-radius: 50%;
+    align-items: center;
+    align-content: center;
+    cursor: pointer;
+    width: 1em;
+    height: 1em;
+    font-size: 50px;
+    padding: 10px;
+    position: absolute;
+    left: 3%;
+    top: 10%;
+}
+
+
+/* Typography */
+
+.control p, .hud div p {
+    font-size: 0.55rem;
+    
+}
+
+/* Night-Mode Coloring */
+
+.container.night-mode {
+    background-image: linear-gradient(to left, #434343 0%, black 100%);
+}
+
+.night-mode .night-mode-button {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #fff;
+}
+.night-mode .hud div{
+    color: #fff; 
+}
+.night-mode .hud div p
+{
+    color: #000;
+}
+.night-mode .game{
+    background: #fff;
+}
+.night-mode .control{
+    background: #fff;
+}
+/* Day-Mode Coloring */
+
+.container.day-mode {
+    background: #4801FF 100%;
+}
+
+.day-mode .night-mode-button {
+    background: #4801FF 100%;
+    color: rgb(221, 210, 210);
+}
+
+.day-mode .hud div p,
+.day-mode footer p,
+.day-mode footer a {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/* Coloring */
+
+#red {
+    background-color: red;
+}
+
+#yellow {
+    background-color: yellow;
+}
+
+#green {
+    background-color: green;
+}
+
+#blue {
+    background-color: blue;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .control p, .hud div p {
+        font-size: 0.75rem;
+    }
+}
+
+@media (min-width: 992px) {
+    main {
+        align-items: center;
+        display: flex;
+        height: 90vh;
+        justify-content: center;
+    }
+
+    .game {
+        height: 40vw;
+        margin: 0 35px 0 0;
+        width: 40vw;
+    }
+
+    .control p, .hud div p {
+        font-size: 0.9rem;
+    }
+
+    .hud {
+        align-items: center;
+        flex-direction: column;
+        margin: 0 0 0 35px;
+        justify-content: space-around;
+        width: 250px;
+    }
+
+    .hud div {
+        margin: 60px 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .control p, .hud div p {
+        font-size: 1.1rem;
+    }
+}
